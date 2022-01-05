@@ -7,7 +7,10 @@ module.exports = function (config, env) {
     components: resolve('src/components'),
     assets: resolve('src/assets'),
     config: resolve('src/config'),
-    pages: resolve('src/pages'),
+    containers: resolve('src/containers'),
+    api: resolve('src/api'),
+    services: resolve('src/services'),
+    store: resolve('src/store'),
   });
 
   return config;

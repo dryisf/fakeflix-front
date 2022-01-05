@@ -3,8 +3,9 @@ import styled from 'styled-components';
 
 const Wrapper = styled(FlexDiv)`
   && {
-    height: 50px;
-    background-color: black;
+    height: 68px;
+    padding: 0 57px;
+    background-color: #141414;
   }
 `;
 

@@ -10,7 +10,10 @@
       "components/*": ["components/*"],
       "assets/*": ["assets/*"],
       "config/*": ["config/*"],
-      "pages/*": ["pages/*"]
+      "containers/*": ["containers/*"],
+      "services/*": ["services/*"],
+      "api/*": ["api/*"],
+      "store/*": ["store/*"]
     }
   },
   "exclude": ["node_modules", "build", "coverage", "dist", "lib"]

@@ -1,11 +1,25 @@
-import HomePage from 'pages/HomePage';
-import LatestMoviesPage from 'pages/LatestMoviesPage';
-import LoginPage from 'pages/LoginPage';
-import MyListPage from 'pages/MyListPage';
-import RegistrationPage from 'pages/RegistrationPage';
+import HomePage from 'containers/HomePage';
+import LatestMoviesPage from 'containers/LatestMoviesPage';
+import LoginPage from 'containers/LoginPage';
+import MyAccountPage from 'containers/MyAccountPage';
+import MyListPage from 'containers/MyListPage';
+import RegistrationPage from 'containers/RegistrationPage';
 import React from 'react';
+import { Navigate } from 'react-router-dom';
 
 const routes = [
+  {
+    title: 'Root',
+    path: '/',
+    element: (
+      <Navigate
+        to={{
+          pathname: '/home',
+        }}
+      />
+    ),
+    requiresAuthentication: false,
+  },
   {
     title: 'Accueil',
     path: '/home',
@@ -25,7 +39,7 @@ const routes = [
     requiresAuthentication: false,
   },
   {
-    title: 'Ma Liste',
+    title: 'Ma liste',
     path: '/my-list',
     element: <MyListPage />,
     requiresAuthentication: true,
@@ -34,6 +48,12 @@ const routes = [
     title: 'Nouveautés',
     path: '/latest',
     element: <LatestMoviesPage />,
+    requiresAuthentication: true,
+  },
+  {
+    title: 'Mon compte',
+    path: '/my-account',
+    element: <MyAccountPage />,
     requiresAuthentication: true,
   },
 ];

@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 const Img = styled.img`
   && {
-    padding: 12px;
+    height: 27px;
+    margin-right: 25px;
   }
 `;
 

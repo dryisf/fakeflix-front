@@ -1,9 +1,11 @@
-import { Button, Grid, TextField } from '@mui/material';
+import { Grid } from '@mui/material';
 import React from 'react';
 
+import TextField from 'components/TextField';
 import FlexDiv from 'components/FlexDiv';
 import PropTypes from 'prop-types';
 import ButtonWrapper from './ButtonWrapper';
+import Button from './Button';
 
 const RegistrationPage = ({ register, handleSubmit, onSubmit }) => (
   <form onSubmit={handleSubmit(onSubmit)}>

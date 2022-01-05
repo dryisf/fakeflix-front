@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import Logo from 'assets/logo.png';
 import PropTypes from 'prop-types';
@@ -16,12 +17,13 @@ import Button from './Button';
 
 const Navbar = ({ isAuthentified }) => {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const onLogout = useCallback(() => {
     dispatch(logUserOut());
   }, [dispatch]);
 
-  return (
+  return location && location.pathname === '/watch' ? null : (
     <Wrapper justify="space-between" alignItems="center">
       <FlexDiv alignItems="center">
         <Link to="/home">

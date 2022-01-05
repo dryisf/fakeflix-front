@@ -6,7 +6,7 @@ import {
   ArrowForwardIosOutlined,
 } from '@mui/icons-material';
 
-const List = () => {
+const List = ({ movies }) => {
   const [slideNumber, setSlideNumber] = useState(0);
   const [isMoved, setIsMoved] = useState(false);
   const listRef = useRef();
@@ -34,16 +34,11 @@ const List = () => {
           style={{ display: !isMoved && 'none' }}
         />
         <div className="container" ref={listRef}>
-          <ListItem index={0}></ListItem>
-          <ListItem index={1}></ListItem>
-          <ListItem index={2}></ListItem>
-          <ListItem index={3}></ListItem>
-          <ListItem index={4}></ListItem>
-          <ListItem index={5}></ListItem>
-          <ListItem index={6}></ListItem>
-          <ListItem index={7}></ListItem>
-          <ListItem index={8}></ListItem>
-          <ListItem index={9}></ListItem>
+          {movies &&
+            movies.length > 0 &&
+            movies.map((movie, index) => (
+              <ListItem index={index} movie={movie} />
+            ))}
         </div>
         <ArrowForwardIosOutlined
           className="sliderArrow right"
@@ -53,5 +48,4 @@ const List = () => {
     </div>
   );
 };
-
 export default List;

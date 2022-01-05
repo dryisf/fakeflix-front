@@ -5,7 +5,6 @@ import { fetchUserInfo, selectIsAuthentified } from './slice';
 import Navbar from 'components/Navbar';
 import routes from 'config/routes';
 import React, { useEffect } from 'react';
-import ContentWrapper from './components/ContentWrapper';
 import { useDispatch } from 'react-redux';
 
 const shouldRedirectToLogin = (requiresAuthentication, isAuthentified) =>
@@ -33,24 +32,22 @@ const App = () => {
   return (
     <div>
       <Navbar isAuthentified={isAuthentified} />
-      <ContentWrapper>
-        <Routes>
-          {routes.map(({ title, path, element, requiresAuthentication }) => {
-            const redirectToLogin = shouldRedirectToLogin(
-              requiresAuthentication,
-              isAuthentified,
-            );
+      <Routes>
+        {routes.map(({ title, path, element, requiresAuthentication }) => {
+          const redirectToLogin = shouldRedirectToLogin(
+            requiresAuthentication,
+            isAuthentified,
+          );
 
-            return (
-              <Route
-                key={title}
-                path={path}
-                element={redirectToLogin ? navigateToLoginElement : element}
-              />
-            );
-          })}
-        </Routes>
-      </ContentWrapper>
+          return (
+            <Route
+              key={title}
+              path={path}
+              element={redirectToLogin ? navigateToLoginElement : element}
+            />
+          );
+        })}
+      </Routes>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import LoginPage from 'pages/LoginPage';
 import MyListPage from 'pages/MyListPage';
 import RegistrationPage from 'pages/RegistrationPage';
 import React from 'react';
+import Watch from 'pages/Watch';
 
 const routes = [
   {
@@ -34,6 +35,12 @@ const routes = [
     title: 'Nouveautés',
     path: '/latest',
     element: <LatestMoviesPage />,
+    requiresAuthentication: true,
+  },
+  {
+    title: '',
+    path: '/watch',
+    element: <Watch />,
     requiresAuthentication: true,
   },
 ];

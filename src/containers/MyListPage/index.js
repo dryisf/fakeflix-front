@@ -1,8 +1,18 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
+import List from 'components/List';
+import Container from 'components/List/Container';
 
-const MyListPage = () => <div>MyList</div>;
+const MyListPage = () => {
+  return (
+    <Container>
+      <List />
+      <List />
+      <List />
+    </Container>
+  );
+};
 
 MyListPage.propTypes = {};
 

@@ -1,8 +1,15 @@
 import React from 'react';
+import "./home.scss";
+import List from 'components/List';
+import Featured from 'components/Featured/Featured';
 
-import PropTypes from 'prop-types';
-
-const HomePage = () => <div>Home</div>;
+const HomePage = () => <div className="home">
+  <Featured/>
+  <List/>
+  <List/>
+  <List/>
+  <List/>
+</div>;
 
 HomePage.propTypes = {};
 

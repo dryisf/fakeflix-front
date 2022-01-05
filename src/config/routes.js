@@ -6,6 +6,7 @@ import MyListPage from 'containers/MyListPage';
 import RegistrationPage from 'containers/RegistrationPage';
 import React from 'react';
 import { Navigate } from 'react-router-dom';
+import Watch from 'containers/Watch';
 
 const routes = [
   {
@@ -54,6 +55,12 @@ const routes = [
     title: 'Mon compte',
     path: '/my-account',
     element: <MyAccountPage />,
+    requiresAuthentication: true,
+  },
+  {
+    title: '',
+    path: '/watch',
+    element: <Watch />,
     requiresAuthentication: true,
   },
 ];

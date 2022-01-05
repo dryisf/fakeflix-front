@@ -33,9 +33,6 @@ const LoginPage = ({ register, handleSubmit, onSubmit }) => (
         <Button variant="contained" type="submit">
           Se connecter
         </Button>
-        <Button variant="contained" type="submit">
-          S'inscrire
-        </Button>
       </ButtonWrapper>
     </FlexDiv>
   </form>

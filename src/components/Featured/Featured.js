@@ -10,7 +10,7 @@ const Featured = ({ movie }) => {
   return (
     <div className="featured">
       <div className="category">
-        <span>Movies</span>
+        <span>Films</span>
         <select name="genre" id="genre">
           <option>Genre</option>
           <option value="adventure">Adventure</option>

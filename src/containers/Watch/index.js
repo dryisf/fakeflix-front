@@ -1,6 +1,5 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
 import { ArrowBackOutlined } from '@mui/icons-material';
 import './watch.scss';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,7 @@ const Watch = () => {
       <Link to="/">
         <div className="back">
           <ArrowBackOutlined />
-          Home
+          <span style={{ marginLeft: 5 }}>Retour</span>
         </div>
       </Link>
       <video
